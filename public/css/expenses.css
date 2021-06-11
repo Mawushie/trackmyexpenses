@@ -1,0 +1,48 @@
+body{
+    color: black;
+}
+
+#topnav{
+    background-color: darkslategrey;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.addexpense{
+    border-right: gray 1px solid;
+}
+
+.expenselist{
+   color: black;
+}
+
+.headings{
+    padding: 20px;
+    border: black 1px solid;
+    border-radius: 10px;
+    background-color: rgba(142, 183, 243, 0.568);
+}  
+
+form{
+    text-align: left; 
+}
+
+input,select{
+    width: 100%;
+    height: 50px;
+    border-color: black ;
+    border-radius: 10px;
+    border: black 1px solid;
+}
+
+#actions1{
+    border-radius: 5px;
+    border: black 0.5px solid;
+}
+
+#actions2{
+    margin-left: 5px;
+    border-radius: 5px;
+    border: black 0.5px solid;
+}
