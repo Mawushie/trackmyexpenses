@@ -46,3 +46,7 @@ input,select{
     border-radius: 5px;
     border: black 0.5px solid;
 }
+
+#button{
+    background-color: darkslategray;
+}

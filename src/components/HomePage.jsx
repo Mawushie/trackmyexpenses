@@ -23,19 +23,19 @@ export default class HomePage extends Component {
 
                        
                             <div className = "col-md-12">
-                                <div className = "col-md-3">
+                                <div className = "col-xs-3 col-sm-3 col-md-3">
                                  <h4>Category</h4>
                                 </div>
 
-                                <div className = "col-md-3">
+                                <div className = "col-xs-3 col-sm-3 col-md-3">
                                     <h4>Item/Service</h4>
                                 </div>
 
-                                <div className = "col-md-2"  style={{paddingLeft:30}}>
+                                <div className = "col-xs-2 col-sm-2 col-md-2"  style={{paddingLeft:30}}>
                                     <h4>Amount</h4>
                                 </div>
 
-                                <div className = "col-md-3">
+                                <div className = "col-xs- 3 col-sm-3 col-md-3">
                                     <h4>Date</h4>
                                 </div>
                              </div>

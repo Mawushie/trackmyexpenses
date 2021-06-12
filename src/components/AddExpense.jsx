@@ -25,7 +25,6 @@ class AddExpense extends Component {
         var expenseId = 10000 + Math.random() * 10000000; //gives eachexpense an ID for editing and deletion purposes
         var expense  = { ...this.state, id: expenseId };
         this.props.addNewExpense(expense);
-        console.log(expenseId)
         //this clears whatever was typed initially into the form;basically resetting the form
         this.setState({
             category : "",
