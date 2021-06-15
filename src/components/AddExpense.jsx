@@ -77,7 +77,7 @@ class AddExpense extends Component {
                     
                     <br></br>
 
-                    <button type="button" onClick = {this.handleSubmit} className = "btn btn-primary btn-lg"> Save </button>
+                    <button type="button" onClick = {this.handleSubmit} className = "btn btn-primary btn-lg" id = "button"> Save </button>
                
                 </form>
             </div>
