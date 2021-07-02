@@ -36,6 +36,7 @@ class ExpenseItem extends Component {
                  
                         <div className = "col-xs-2 col-sm-2 col-md-2 text-center">
                             {this.props.expense.category}
+                    
                         </div>
                         <div className = "col-xs-2 col-sm-2 col-md-2 text-center">
                             {this.props.expense.itemorservice}

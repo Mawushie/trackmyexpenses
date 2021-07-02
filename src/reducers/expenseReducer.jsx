@@ -5,27 +5,33 @@ var initialState = {
 //reducer function
 const expenseReducer = (state = initialState, action) => {
         switch (action.type) {
-            case 'ADD_EXPENSE':
-               return{
-                ...state , expenses : [...state.expenses , action.payload]
-               }
+            // case 'ADD_EXPENSE':
+            //    return{
+            //     ...state , expenses : [...state.expenses , action.payload]
+            //    }
 
-            case "EDIT_EXPENSE":
-            var id = action.payload.id;
-            let updatedExpenseInfo = action.payload.updatedExpenseInfo;
-            let expensesAfterUpdate = state.expenses.map((expense) => {
-                if (expense.id === id) {
-                return updatedExpenseInfo;
-                }
-                return expense;
-            });
+            case 'GET_ALL_EXPENSES':
+            let expensesfromdb = action.payload
+            return{
+                expenses : expensesfromdb
+            }
+
+            // case "EDIT_EXPENSE":
+            // var id = action.payload.id;
+            // let updatedExpenseInfo = action.payload.updatedExpenseInfo;
+            // let expensesAfterUpdate = state.expenses.map((expense) => {
+            //     if (expense.id === id) {
+            //     return updatedExpenseInfo;
+            //     }
+            //     return expense;
+            // });
             
-            return { expenses: expensesAfterUpdate };
+            // return { expenses: expensesAfterUpdate };
 
-            case "DELETE_EXPENSE":
-            var id = action.payload;
-            let expensesAfterDelete = state.expenses.filter((expense) => expense.id !== id);
-            return { expenses: expensesAfterDelete };
+            // case "DELETE_EXPENSE":
+            // var id = action.payload;
+            // let expensesAfterDelete = state.expenses.filter((expense) => expense.id !== id);
+            // return { expenses: expensesAfterDelete };
 
             default: 
                 return state;
