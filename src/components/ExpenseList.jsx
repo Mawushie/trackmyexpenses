@@ -31,7 +31,7 @@ class ExpenseList extends Component {
 
 const mapStateToProps = (state) =>{
     return{
-    expensesData : state.expenses
+    expensesData : state.expenseState.expenses
     }       
 }
 
