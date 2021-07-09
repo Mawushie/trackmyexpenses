@@ -1,12 +1,16 @@
-import { getFirebase, reactReduxFirebase } from "react-redux-firebase";
-import { createStore , compose , applyMiddleware } from "redux";
+import { getFirebase, reactReduxFirebase , firebaseReducer } from "react-redux-firebase";
+import { createStore , compose , applyMiddleware, combineReducers } from "redux";
 import { getFirestore, reduxFirestore} from "redux-firestore";
 import thunk from "redux-thunk";
 import firebase from '../firebase/config'
-
 import expenseReducer from "../reducers/expenseReducer";
 
-export const store = createStore(expenseReducer, compose(
+const allReducers = combineReducers({
+    expenseState : expenseReducer,
+    firebaseState : firebaseReducer
+})
+
+export const store = createStore(allReducers, compose(
     applyMiddleware(thunk.withExtraArgument({getFirebase,getFirestore})),
     reactReduxFirebase(firebase),
     reduxFirestore(firebase)
