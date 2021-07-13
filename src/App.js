@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
 import HomePage from './components/HomePage'
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route exact path = '/' component = {Home} />
           <Route exact path = '/signup' component = {SignUp} />
           <Route exact path = '/login' component = {LogIn} />
-          <Route exact path = '/dashboard' component = {HomePage} />
+          <ProtectedRoute exact path = '/dashboard' component = {HomePage} />
         </Switch>
       </BrowserRouter>
     </div>
