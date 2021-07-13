@@ -1,8 +1,18 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { logOutAction } from '../actions/authActions'
 import AddExpense from './AddExpense'
 import ExpenseList from './ExpenseList'
 
-export default class HomePage extends Component {
+class HomePage extends Component {
+    constructor(props){
+        super(props)
+    }
+
+    handleLogOut =() =>{
+        this.props.logOutAction()
+    }
+
     render() {
         return (
             <div className = "container">
@@ -11,6 +21,10 @@ export default class HomePage extends Component {
                 </div>
 
                 <div className = "container">
+                    <div className = 'row text-right'  style ={{padding : 20}}>
+                        <button type = 'button' className = "btn btn-primary btn-lg" onClick = {this.handleLogOut}>Log Out</button>
+                    </div>
+
                     <div className = "row">
                         <div className = "col-md-3 addexpense">
                             <h4 className = "headings">Record New Expense</h4>
@@ -50,3 +64,9 @@ export default class HomePage extends Component {
         )
     }
 }
+
+const mapDispatchToProps = {
+    logOutAction
+}
+
+export default connect(null, mapDispatchToProps)(HomePage)
